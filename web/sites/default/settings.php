@@ -86,7 +86,7 @@
  * );
  * @endcode
  */
- $databases = array();
+$databases = array();
 
 /**
  * Customizing database settings.
@@ -739,6 +739,10 @@ $settings['file_scan_ignore_directories'] = [
   'bower_components',
 ];
 
+$settings['install_profile'] = 'minimal';
+$config_directories['common'] = 'sites/default/common_config';
+$config_directories['local'] = 'sites/default/local_config';
+
 /**
  * Load local development override configuration, if available.
  *
@@ -749,9 +753,6 @@ $settings['file_scan_ignore_directories'] = [
  *
  * Keep this code block at the end of this file to take full effect.
  */
-$settings['install_profile'] = 'minimal';
-$config_directories['common'] = 'sites/default/config';
-$config_directories['local'] = 'sites/default/config';
 
 if (file_exists($app_root . '/' . $site_path . '/local.settings.php')) {
   include $app_root . '/' . $site_path . '/local.settings.php';

@@ -740,7 +740,7 @@ $settings['file_scan_ignore_directories'] = [
 ];
 
 $settings['install_profile'] = 'minimal';
-$config_directories['common'] = 'sites/default/config';
+$config_directories['sync'] = 'sites/default/config';
 
 /**
  * Load local development override configuration, if available.

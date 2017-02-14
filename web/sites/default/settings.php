@@ -285,7 +285,7 @@ $config_directories = array();
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = '';
+$settings['hash_salt'] = '3zqj_TgCNMSB1I386RlAUitEX6gl6npkMUwmmwyCR1TQff4Bhe3fiuGjVwx1aCw9yBShYLwZtQ';
 
 /**
  * Deployment identifier.
@@ -749,7 +749,10 @@ $settings['file_scan_ignore_directories'] = [
  *
  * Keep this code block at the end of this file to take full effect.
  */
-#
-# if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-#   include $app_root . '/' . $site_path . '/settings.local.php';
-# }
+$settings['install_profile'] = 'minimal';
+$config_directories['common'] = 'sites/default/config';
+$config_directories['local'] = 'sites/default/config';
+
+if (file_exists($app_root . '/' . $site_path . '/local.settings.php')) {
+  include $app_root . '/' . $site_path . '/local.settings.php';
+}
